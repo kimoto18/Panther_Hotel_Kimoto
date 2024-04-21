@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Confirmation Page</h1>
+    <p>Reservation Confirmed!</p>
+    <p>Name: {{ reservation[1] }}</p>
+    <p>Email: {{ reservation[2] }}</p>
+    <p>Date: {{ reservation[3] }}</p>
+    <p>Time: {{ reservation[4] }}</p>
+</body>
+</html>

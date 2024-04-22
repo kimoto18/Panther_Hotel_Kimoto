@@ -4,11 +4,9 @@ import sqlite3
 app = Flask(__name__)
 DATABASE = 'database.db'
 
-# Database connection
 conn = sqlite3.connect('database.db')
 c = conn.cursor()
 
-# Create tables if not exists
 c.execute('''CREATE TABLE IF NOT EXISTS reservations (
              id INTEGER PRIMARY KEY,
              name TEXT,
@@ -18,7 +16,6 @@ c.execute('''CREATE TABLE IF NOT EXISTS reservations (
 conn.commit()
 conn.close()
 
-# Routes
 @app.route('/')
 def welcome():
     return render_template('welcome.html')
